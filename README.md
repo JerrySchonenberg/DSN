@@ -15,7 +15,6 @@ The code for the configuration can be found in `/DSN/config_DSN.py`, while the i
 
 ## Overview of repository
 Here, an overview of all directories is given. **Note that some scripts/code contain absolute/relative paths, so they might not be up to date with the repository. Change the paths manually when necessary.** Moreover, the datasets are not included.
-<center>
 | Directory    | Description                                                           |
 |--------------|-----------------------------------------------------------------------|
 | config       | `.ini`-files for configuring the DSN, and connecting to CoppeliaSim   |
@@ -26,7 +25,6 @@ Here, an overview of all directories is given. **Note that some scripts/code con
 | experiments  | Code + results for the two conducted experiments                      |
 | models       | Baseline-class, all model architectures, weights and history-files    |
 | thesis       | Thesis (`.pdf`) of project                                              |
-</center>
 
 ## Usage
 The models are trained on obstacle avoidance images with the classes: Backwards, Left, Right and Straight. The CNN its output is in the same order as mentioned here.
