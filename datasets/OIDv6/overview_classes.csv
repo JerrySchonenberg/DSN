@@ -1,0 +1,65 @@
+Class,Training,Validation,Test
+Alloy wheel,272,20,40
+Aluminium can,470,4,18
+Bag,951,75,226
+Ball,4631,0,0
+Barrel,608,25,28
+Battery,227,0,0
+Bicycle,63271,145,435
+Book,54368,37,137
+Bottle,75067,135,411
+Bowl,1414,34,104
+Box,1607,54,115
+Cable,515,13,47
+Calculator,173,8,40
+Calendar,235,13,16
+Camera,4405,127,283
+Candy,799,75,239
+Cardboard,212,0,0
+Chair,12007,104,301
+Clock,14367,13,44
+Closet,329,10,25
+Computer,44369,0,0
+Computer keyboard,337,18,61
+Computer monitor,264,24,47
+Computer mouse,324,13,56
+Cup,1025,96,298
+Desk,11841,46,118
+Door,6331,71,202
+Fan,435,0,0
+Fence,36700,15,44
+Frying pan,368,10,19
+Game controller,196,11,56
+Games,188,113,0
+Glass,590,0,0
+Headphones,943,29,77
+Helmet,7290,0,0
+Jewellery,4804,100,323
+Key,244,0,0
+Lamp,966,21,62
+Lantern,606,6,23
+Laptop,8803,11,40
+Light bulb,407,7,20
+Locker,194,6,18
+Medicine,171,9,32
+Money,482,62,162
+Outdoor bench,337,1,1
+Pen,907,34,81
+Pencil,273,12,42
+Pillow,994,28,120
+Power plugs and sockets,176,15,33
+Present,277,7,15
+Radio,397,8,12
+Refrigerator,446,17,57
+Remote control,220,3,16
+Scissors,350,1,5
+Shoe,30755,231,674
+Shopping cart,373,13,16
+Smartphone,623,40,136
+Stairs,2828,13,47
+Umbrella,2327,16,47
+Vending machine,184,11,16
+Washing machine,321,23,64
+Watch,9506,19,73
+Wheelchair,680,0,0
+Whiteboard,13467,14,33

@@ -1,0 +1,13 @@
+m = amount of collisions with moving obstacles
+s = amount of collisions with static obstacles
+
+==== ROOM ====
+exp1: m=0 s=0
+exp2: m=1 s=0
+exp3: m=1 s=0
+exp4: m=0 s=0
+exp5: m=0 s=1
+
+==== HALLWAY ====
+clockwise: m=1 s=0
+anticlock: m=2 s=1
