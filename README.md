@@ -1,19 +1,19 @@
 # Differential Siamese Network for the Avoidance of Moving Obstacles
 ### BSc Computer Science Thesis - Jerry Schonenberg
-##### Leiden Institute of Advanced Computer Science (LIACS) - _26-08-2020_
+##### Leiden Institute of Advanced Computer Science (LIACS) - 26-08-2020
 This repository provides the thesis, code and results from my BSc Project. The project tackles the problem of avoiding moving obstacles using only a monocular RGB camera. It uses a convolutional neural network (CNN) to retrieve information from the images, where its [architecture](/models/baseline/original/baseline_paper.py) is taken from another paper from Khan and Parker ("_Vision based indoor obstacle avoidance using a deep convolutional neural network_"). The architecture is [modified](/models/baseline/modified/baseline_modified.py) slightly and acts as a baseline for our solution to the problem. Its architecture is visualized below.
 ![Architecture](/models/baseline/modified/img/visualization.png)
 This README contains a brief overview of the project and how to run important code. For a more thorough explanation, please read the [thesis](thesis/thesis.pdf). All experiments are conducted in a virtual environment, we chose for [CoppeliaSim](https://www.coppeliarobotics.com/) and this software is also required if you want to run any of the code.
 
 ___
 
-##### Differential Siamese Network
+### Differential Siamese Network
 The Differential Siamese Network (DSN) is our main contribution. It tries to predict the current image on the basis of an earlier image. To define which images are used, we denote DSN-_n_, where _n_ indicates how many images the DSN looks in the past. So if we have images _s_, _t_, _v_ and _w_ which occur sequentially (least to most present, _w_ is the current image), then DSN-2 takes image _t_.
 The DSN-architecture is visualized below, with all four of its components. Here, the bold arrows are the in- and output of the DSN, while the dotted arrows describe actions which occur after an iteration.
 ![DSN visualization](/DSN/figures/DSN_visualization.png)
 The code for the configuration can be found in `/DSN/config_DSN.py`, while the implementation of the DSN itself can be found here `DSN/DSN.py`.
 
-### Overview of repository
+## Overview of repository
 Here, an overview of all directories is given. **Note that some scripts/code contain absolute/relative paths, so they might not be up to date with the repository. Change the paths manually when necessary.** Moreover, the datasets are not included.
 <center>
 | Directory    | Description                                                           |
@@ -28,12 +28,12 @@ Here, an overview of all directories is given. **Note that some scripts/code con
 | thesis       | Thesis (`.pdf`) of project                                              |
 </center>
 
-### Usage
+## Usage
 The models are trained on obstacle avoidance images with the classes: Backwards, Left, Right and Straight. The CNN its output is in the same order as mentioned here.
 
 ___
 
-##### Models
+### Models
 In order to use the baseline model, import `/models/baseline/baseline.py` and create a new instance of the Baseline class. Then:
 ``` 
 model = Baseline(CNN_filename)  #create instance of baseline
@@ -50,7 +50,7 @@ The weights of the models are also included in the repository, and can be found 
 
 ___
 
-##### Configuring the DSN
+### Configuring the DSN
 But before you can use the DSN, it has to be configured to be able to construct realistic predictions. As earlier mentioned, the file which handles the configuration can be found in `/DSN/config_DSN.py`. Then, an `.ini`-file must be provided which defines the speed of the left and right motor for every command (Backwards, Left, Right, Straight). This file can be found here `/config/commands.ini`. **The order of defining the commands is important, do not change this.**
 
 Now, with the use of the CoppeliaSim API, a small configuration run will be executed and the results will be written to a new `.ini`-file named `DSN.ini`. To run the program, use the following command:
@@ -61,7 +61,7 @@ python3 config_DSN.py [iter] [DSN-variant] [tau]
 
 ___
 
-##### CoppeliaSim API
+### CoppeliaSim API
 An API has been written to connect the DSN/baseline to the CoppeliaSim simulator. This API can be found here: `coppelia_sim/API_coppeliasim.py`. It contains functions for the DSN configuration (`check_startup_sim` and `stop_simulation`), manually closing the connection with the simulator (`exit_API`) and provides and interface for CoppeliaSim. Here is a small example:
 ```
 CS = CoppeliaSim(address, port)               #initialize and start the connection
