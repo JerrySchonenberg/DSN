@@ -1,10 +1,5 @@
---requirements to run code; lower/higher versions may also work
-
 python==3.8
-
 tensorflow==2.2.0
 keras==2.3.1
 PIL==8.0.1
 opencv2==4.3.0
-
-coppelia_sim   -- Download via https://www.coppeliarobotics.com/
